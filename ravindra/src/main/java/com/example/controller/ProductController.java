@@ -34,6 +34,10 @@ public class ProductController {
    public List<Product> addproducts(@RequestBody List<Product> products) {
 	   return productService.saveProducts(products);
    }
+   @GetMapping("/welocome")
+   public String welcome(){
+	   return "hi to everyone";
+   }
 
    @GetMapping("/products")
    public List<Product> getproducts(){
